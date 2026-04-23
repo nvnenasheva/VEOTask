@@ -1,0 +1,11 @@
+# Input
+reads: "data/1_024_O.fastq.gz"
+
+# Parameters
+min_read_length: 1000
+threads: 2
+
+# Databases
+kraken_db: "databases/kraken_db"
+checkv_db: "databases/checkv_db/checkv-db-v1.5"
+sample_name: "1_024_O"

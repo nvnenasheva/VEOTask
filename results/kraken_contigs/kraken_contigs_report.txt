@@ -1,0 +1,29 @@
+ 20.00	1	1	U	0	unclassified
+ 80.00	4	0	R	1	root
+ 40.00	2	0	D	10239	  Viruses
+ 40.00	2	0	D1	2731341	    Duplodnaviria
+ 40.00	2	0	K	2731360	      Heunggongvirae
+ 40.00	2	0	P	2731618	        Uroviricota
+ 40.00	2	0	C	2731619	          Caudoviricetes
+ 40.00	2	0	F	2731643	            Autographiviridae
+ 20.00	1	0	F1	2731653	              Studiervirinae
+ 20.00	1	0	G	2732683	                Ghunavirus
+ 20.00	1	0	S	2733618	                  Ghunavirus 17A
+ 20.00	1	1	S1	1729936	                    Pseudomonas phage 17A
+ 20.00	1	0	G	2560102	              Bifseptvirus
+ 20.00	1	0	S	2560657	                Bifseptvirus Bf7
+ 20.00	1	1	S1	1100790	                  Pseudomonas phage Bf7
+ 40.00	2	0	R1	131567	  cellular organisms
+ 40.00	2	0	D	2	    Bacteria
+ 40.00	2	0	P	1224	      Pseudomonadota
+ 40.00	2	0	C	1236	        Gammaproteobacteria
+ 20.00	1	0	O	135623	          Vibrionales
+ 20.00	1	0	F	641	            Vibrionaceae
+ 20.00	1	0	G	662	              Vibrio
+ 20.00	1	0	G1	2614977	                unclassified Vibrio
+ 20.00	1	1	S	2942997	                  Vibrio sp. J383
+ 20.00	1	0	O	91347	          Enterobacterales
+ 20.00	1	0	F	1903414	            Morganellaceae
+ 20.00	1	0	G	586	              Providencia
+ 20.00	1	0	G1	2633465	                unclassified Providencia
+ 20.00	1	1	S	2939731	                  Providencia sp. PROV188

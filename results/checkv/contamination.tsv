@@ -1,0 +1,6 @@
+contig_id	contig_length	total_genes	viral_genes	host_genes	provirus	proviral_length	host_length	region_types	region_lengths	region_coords_bp	region_coords_genes	region_viral_genes	region_host_genes
+contig_1	39266	66	23	0	No	NA	NA	NA	NA	NA	NA	NA	NA
+contig_2	11397	24	11	0	No	NA	NA	NA	NA	NA	NA	NA	NA
+contig_3	41137	94	41	0	No	NA	NA	NA	NA	NA	NA	NA	NA
+contig_4	32457	65	25	0	No	NA	NA	NA	NA	NA	NA	NA	NA
+contig_5	58829	84	37	0	No	NA	NA	NA	NA	NA	NA	NA	NA

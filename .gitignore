@@ -1,0 +1,26 @@
+# Large databases
+databases/
+
+# Raw sequencing data
+data/*.fastq.gz
+data/*.fastq
+
+# Archives
+*.tar.gz
+
+# Snakemake internals
+.snakemake/
+
+# Temporary files
+*.tmp
+__pycache__/
+.ipynb_checkpoints/
+
+# Large assembly subdirectories
+results/assembly/00-assembly/
+results/assembly/10-consensus/
+results/assembly/20-repeat/
+results/assembly/30-contigger/
+results/assembly/40-polishing/
+results/checkv/tmp/
+make.doc

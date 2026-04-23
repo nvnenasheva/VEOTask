@@ -1,0 +1,806 @@
+[2026-04-22 17:54:13] root: INFO: Starting Flye 2.9.6-b1802
+[2026-04-22 17:54:13] root: DEBUG: Cmd: /Users/natalia/miniconda3/envs/veo_env/bin/flye --nano-raw 1_024_O.fastq.gz --meta --out-dir ./assembly/ --threads 2
+[2026-04-22 17:54:13] root: DEBUG: Python version: 3.10.20 (main, Mar 11 2026, 17:43:48) [Clang 20.1.8 ]
+[2026-04-22 17:54:13] root: INFO: >>>STAGE: configure
+[2026-04-22 17:54:13] root: INFO: Configuring run
+[2026-04-22 17:54:14] root: INFO: Total read length: 50814095
+[2026-04-22 17:54:14] root: INFO: Reads N50/N90: 14392 / 4886
+[2026-04-22 17:54:14] root: INFO: Minimum overlap set to 5000
+[2026-04-22 17:54:14] root: INFO: >>>STAGE: assembly
+[2026-04-22 17:54:14] root: INFO: Assembling disjointigs
+[2026-04-22 17:54:14] root: DEBUG: -----Begin assembly log------
+[2026-04-22 17:54:14] root: DEBUG: Running: flye-modules assemble --reads /Users/natalia/Development/VEOTask/1_024_O.fastq.gz --out-asm /Users/natalia/Development/VEOTask/assembly/00-assembly/draft_assembly.fasta --config /Users/natalia/miniconda3/envs/veo_env/lib/python3.10/site-packages/flye/config/bin_cfg/asm_raw_reads.cfg --log /Users/natalia/Development/VEOTask/assembly/flye.log --threads 2 --meta --min-ovlp 5000
+[2026-04-22 17:54:14] DEBUG: Build date: May  4 2025 23:18:43
+[2026-04-22 17:54:14] DEBUG: Total RAM: 16 Gb
+[2026-04-22 17:54:14] DEBUG: Available RAM: 0 Gb
+[2026-04-22 17:54:14] DEBUG: Total CPUs: 10
+[2026-04-22 17:54:14] DEBUG: Loading /Users/natalia/miniconda3/envs/veo_env/lib/python3.10/site-packages/flye/config/bin_cfg/asm_raw_reads.cfg
+[2026-04-22 17:54:14] DEBUG: Loading /Users/natalia/miniconda3/envs/veo_env/lib/python3.10/site-packages/flye/config/bin_cfg/asm_defaults.cfg
+[2026-04-22 17:54:14] DEBUG: 	big_genome_threshold=29000000
+[2026-04-22 17:54:14] DEBUG: 	meta_read_filter_kmer_freq=100
+[2026-04-22 17:54:14] DEBUG: 	chain_large_gap_penalty=2
+[2026-04-22 17:54:14] DEBUG: 	chain_small_gap_penalty=0.5
+[2026-04-22 17:54:14] DEBUG: 	chain_gap_jump_threshold=100
+[2026-04-22 17:54:14] DEBUG: 	max_jump_gap=500
+[2026-04-22 17:54:14] DEBUG: 	max_coverage_drop_rate=5
+[2026-04-22 17:54:14] DEBUG: 	max_extensions_drop_rate=5
+[2026-04-22 17:54:14] DEBUG: 	chimera_window=100
+[2026-04-22 17:54:14] DEBUG: 	chimera_overhang=1000
+[2026-04-22 17:54:14] DEBUG: 	min_reads_in_disjointig=4
+[2026-04-22 17:54:14] DEBUG: 	max_inner_reads=10
+[2026-04-22 17:54:14] DEBUG: 	max_inner_fraction=0.25
+[2026-04-22 17:54:14] DEBUG: 	aggressive_dup_filter=1
+[2026-04-22 17:54:14] DEBUG: 	max_separation=500
+[2026-04-22 17:54:14] DEBUG: 	unique_edge_length=50000
+[2026-04-22 17:54:14] DEBUG: 	min_repeat_res_support=0.51
+[2026-04-22 17:54:14] DEBUG: 	out_paths_ratio=5
+[2026-04-22 17:54:14] DEBUG: 	graph_cov_drop_rate=5
+[2026-04-22 17:54:14] DEBUG: 	coverage_estimate_window=100
+[2026-04-22 17:54:14] DEBUG: 	max_bubble_length=50000
+[2026-04-22 17:54:14] DEBUG: 	loop_coverage_rate=1.5
+[2026-04-22 17:54:14] DEBUG: 	repeat_edge_cov_mult=1.75
+[2026-04-22 17:54:14] DEBUG: 	weak_detach_rate=5
+[2026-04-22 17:54:14] DEBUG: 	tip_coverage_rate=2
+[2026-04-22 17:54:14] DEBUG: 	tip_length_rate=2
+[2026-04-22 17:54:14] DEBUG: 	output_gfa_before_rr=1
+[2026-04-22 17:54:14] DEBUG: 	remove_alt_edges=0
+[2026-04-22 17:54:14] DEBUG: 	low_cutoff_warning=1
+[2026-04-22 17:54:14] DEBUG: 	kmer_size=17
+[2026-04-22 17:54:14] DEBUG: 	use_minimizers=0
+[2026-04-22 17:54:14] DEBUG: 	reads_base_alignment=0
+[2026-04-22 17:54:14] DEBUG: 	meta_read_top_kmer_rate=0.40
+[2026-04-22 17:54:14] DEBUG: 	maximum_jump=1500
+[2026-04-22 17:54:14] DEBUG: 	maximum_overhang=1500
+[2026-04-22 17:54:14] DEBUG: 	repeat_kmer_rate=100
+[2026-04-22 17:54:14] DEBUG: 	assemble_ovlp_divergence=0.10
+[2026-04-22 17:54:14] DEBUG: 	assemble_divergence_relative=1
+[2026-04-22 17:54:14] DEBUG: 	repeat_graph_ovlp_divergence=0.08
+[2026-04-22 17:54:14] DEBUG: 	read_align_ovlp_divergence=0.25
+[2026-04-22 17:54:14] DEBUG: 	hpc_scoring_on=0
+[2026-04-22 17:54:14] DEBUG: 	add_unassembled_reads=0
+[2026-04-22 17:54:14] DEBUG: 	extend_contigs_with_repeats=0
+[2026-04-22 17:54:14] DEBUG: 	min_read_cov_cutoff=3
+[2026-04-22 17:54:14] DEBUG: 	short_tip_length=20000
+[2026-04-22 17:54:14] DEBUG: 	long_tip_length=100000
+[2026-04-22 17:54:14] DEBUG: Running with k-mer size: 17
+[2026-04-22 17:54:14] DEBUG: Running with minimum overlap 5000
+[2026-04-22 17:54:14] DEBUG: Metagenome mode: Y
+[2026-04-22 17:54:14] DEBUG: Short mode: N
+[2026-04-22 17:54:14] INFO: Reading sequences
+[2026-04-22 17:54:14] DEBUG: Building positional index
+[2026-04-22 17:54:14] DEBUG: Total sequence: 45433303 bp
+[2026-04-22 17:54:15] INFO: Counting k-mers:
+[2026-04-22 17:54:18] DEBUG: Updating k-mer histogram
+[2026-04-22 17:54:31] DEBUG: Hash size: 125405
+[2026-04-22 17:54:31] DEBUG: Total k-mers 7476281
+[2026-04-22 17:54:31] INFO: Filling index table (1/2)
+[2026-04-22 17:54:37] DEBUG: Mean k-mer frequency: 94.9212
+[2026-04-22 17:54:37] DEBUG: Repetitive k-mer frequency: 9492
+[2026-04-22 17:54:37] DEBUG: Filtered 0 repetitive k-mers (0)
+[2026-04-22 17:54:37] INFO: Filling index table (2/2)
+[2026-04-22 17:54:43] DEBUG: Sorting k-mer index
+[2026-04-22 17:54:43] DEBUG: Selected k-mers: 218764
+[2026-04-22 17:54:43] DEBUG: Index size: 17936682
+[2026-04-22 17:54:43] DEBUG: Mean k-mer index frequency: 81.991
+[2026-04-22 17:54:43] DEBUG: Peak RAM usage: 6 Gb
+[2026-04-22 17:54:43] DEBUG: Estimating k-mer identity bias
+[2026-04-22 17:57:16] DEBUG: Initial divergence estimate : 0.0460564
+[2026-04-22 17:57:16] DEBUG: Relative threshold: Y
+[2026-04-22 17:57:16] DEBUG: Max divergence threshold set to 0.146056
+[2026-04-22 17:57:16] INFO: Extending reads
+[2026-04-22 17:57:16] DEBUG: Estimating overlap coverage
+[2026-04-22 18:02:20] INFO: Overlap-based coverage: 442
+[2026-04-22 18:02:20] INFO: Median overlap divergence: 0.0542451
+[2026-04-22 18:02:20] DEBUG: Sequence divergence distribution: 
+
+    |            **               |                                                                      
+    |       **   **               |                                                                      
+    |       **   **               |                                                                      
+    |       **   **               |                                                                      
+    |       ***  **               |                                                                      
+    |      ****  **               |                                                                      
+    |      ****  **               |                                                                      
+    |      **** ***               |                                                                      
+    |      *********              |                                                                      
+    |      *********              |                                                                      
+    |      *********              |                                                                      
+    |      *********              |                                                                      
+    |      **********             |                                                                      
+    |     ***********             |                                                                      
+    |     ***********             |                                                                      
+    |     ***********             |                                                                      
+    |     *************           |                                                                      
+    |     **************          |                                                                      
+    |    ***************          |                                                                      
+    |   **************************|  *  *                                                                
+    ----------------------------------------------------------------------------------------------------
+    0%        5%        10%       15%       20%       25%       30%       35%       40%       45%       
+
+    Q25 = 0.04, Q50 = 0.054, Q75 = 0.067
+
+[2026-04-22 18:02:22] DEBUG: Assembled disjointig 1
+	With 11 reads
+	Start read: +abe71d4d-759c-4b45-be77-1230b1a4c7d6
+	At position: 8
+	leftTip: 0 rightTip: 0
+	Suspicious: 0
+	Short ext: 0
+	Mean extensions: 599
+	Avg overlap len: 33641
+	Min overlap len: 14894
+	Inner reads: 0
+	Length: 118885
+[2026-04-22 18:02:22] DEBUG: Inner: 4560 covered: 5928 total: 6650
+[2026-04-22 18:02:22] DEBUG: Discarded disjointig with 6 reads and 3 inner overlaps
+[2026-04-22 18:02:24] DEBUG: Assembled disjointig 2
+	With 3 reads
+	Start read: +22edeece-d94f-42ea-9e12-ea7f632e66c8
+	At position: 2
+	leftTip: 1 rightTip: 1
+	Suspicious: 2
+	Short ext: 0
+	Mean extensions: 1
+	Avg overlap len: 7360
+	Min overlap len: 5184
+	Inner reads: 0
+	Length: 13581
+[2026-04-22 18:02:24] DEBUG: Inner: 4566 covered: 5936 total: 6650
+[2026-04-22 18:02:32] DEBUG: Assembled disjointig 3
+	With 2 reads
+	Start read: +6a0186c0-6c08-4ce9-b575-e9a27d6b5d8d
+	At position: 1
+	leftTip: 1 rightTip: 1
+	Suspicious: 1
+	Short ext: 1
+	Mean extensions: 0
+	Avg overlap len: 4581
+	Min overlap len: 4581
+	Inner reads: 0
+	Length: 9172
+[2026-04-22 18:02:32] DEBUG: Inner: 4572 covered: 5960 total: 6650
+[2026-04-22 18:02:40] DEBUG: Assembled disjointig 4
+	With 1 reads
+	Start read: +1ddedfa1-1c36-49f1-adc7-c0ac04f8c06c
+	At position: 1
+	leftTip: 1 rightTip: 1
+	Suspicious: 0
+	Short ext: 0
+	Mean extensions: 0
+	Avg overlap len: 0
+	Min overlap len: 0
+	Inner reads: 0
+	Length: 5035
+[2026-04-22 18:02:40] DEBUG: Inner: 4576 covered: 5986 total: 6650
+[2026-04-22 18:02:46] DEBUG: Assembled disjointig 5
+	With 5 reads
+	Start read: +fdd6255b-ac12-41d9-8d2d-42b28ce013cd
+	At position: 3
+	leftTip: 0 rightTip: 0
+	Suspicious: 0
+	Short ext: 0
+	Mean extensions: 668
+	Avg overlap len: 22457
+	Min overlap len: 12659
+	Inner reads: 0
+	Length: 52080
+[2026-04-22 18:02:46] DEBUG: Inner: 4590 covered: 6226 total: 6650
+[2026-04-22 18:02:46] DEBUG: Assembled disjointig 6
+	With 3 reads
+	Start read: +c53b9d3e-d474-46c5-ae2c-fe583d0b6ec4
+	At position: 1
+	leftTip: 1 rightTip: 1
+	Suspicious: 1
+	Short ext: 0
+	Mean extensions: 1
+	Avg overlap len: 10745
+	Min overlap len: 10620
+	Inner reads: 0
+	Length: 26188
+[2026-04-22 18:02:46] DEBUG: Inner: 4600 covered: 6236 total: 6650
+[2026-04-22 18:02:47] DEBUG: Assembled disjointig 7
+	With 3 reads
+	Start read: +a82a7118-8bf2-4f67-ac0c-3576a9b68642
+	At position: 3
+	leftTip: 1 rightTip: 1
+	Suspicious: 1
+	Short ext: 1
+	Mean extensions: 3
+	Avg overlap len: 7034
+	Min overlap len: 1974
+	Inner reads: 0
+	Length: 39961
+[2026-04-22 18:02:47] DEBUG: Inner: 4614 covered: 6256 total: 6650
+[2026-04-22 18:02:52] DEBUG: Assembled disjointig 8
+	With 3 reads
+	Start read: +83320629-4995-4bc5-a2e7-b7f35420d32d
+	At position: 1
+	leftTip: 1 rightTip: 1
+	Suspicious: 1
+	Short ext: 0
+	Mean extensions: 1
+	Avg overlap len: 18129
+	Min overlap len: 5378
+	Inner reads: 0
+	Length: 32488
+[2026-04-22 18:02:52] DEBUG: Inner: 4624 covered: 6270 total: 6650
+[2026-04-22 18:02:55] DEBUG: Assembled disjointig 9
+	With 1 reads
+	Start read: +73da90b5-ce4e-4851-8b39-69e9b70450cf
+	At position: 1
+	leftTip: 1 rightTip: 1
+	Suspicious: 0
+	Short ext: 0
+	Mean extensions: 0
+	Avg overlap len: 0
+	Min overlap len: 0
+	Inner reads: 0
+	Length: 7599
+[2026-04-22 18:02:55] DEBUG: Inner: 4628 covered: 6278 total: 6650
+[2026-04-22 18:02:55] DEBUG: Assembled disjointig 10
+	With 4 reads
+	Start read: +77fa788b-9c28-404d-b6d1-4ba01fdf8fd0
+	At position: 3
+	leftTip: 1 rightTip: 1
+	Suspicious: 3
+	Short ext: 2
+	Mean extensions: 2
+	Avg overlap len: 3693
+	Min overlap len: 3631
+	Inner reads: 0
+	Length: 16650
+[2026-04-22 18:02:55] DEBUG: Inner: 4646 covered: 6302 total: 6650
+[2026-04-22 18:03:22] DEBUG: Assembled disjointig 11
+	With 3 reads
+	Start read: +0f9e6dd4-9893-429b-a0f1-59a1f1f702ec
+	At position: 3
+	leftTip: 1 rightTip: 1
+	Suspicious: 2
+	Short ext: 1
+	Mean extensions: 1
+	Avg overlap len: 12860
+	Min overlap len: 2143
+	Inner reads: 0
+	Length: 28401
+[2026-04-22 18:03:22] DEBUG: Inner: 4652 covered: 6352 total: 6650
+[2026-04-22 18:03:31] DEBUG: Assembled disjointig 12
+	With 3 reads
+	Start read: +9f6d4431-6414-4aba-8f66-b454553adde2
+	At position: 3
+	leftTip: 1 rightTip: 1
+	Suspicious: 1
+	Short ext: 0
+	Mean extensions: 1
+	Avg overlap len: 7401
+	Min overlap len: 5766
+	Inner reads: 0
+	Length: 38915
+[2026-04-22 18:03:31] DEBUG: Inner: 4660 covered: 6366 total: 6650
+[2026-04-22 18:03:34] DEBUG: Assembled disjointig 13
+	With 1 reads
+	Start read: +788a2982-e509-4b07-a1ec-d447069fa910
+	At position: 1
+	leftTip: 1 rightTip: 1
+	Suspicious: 0
+	Short ext: 0
+	Mean extensions: 0
+	Avg overlap len: 0
+	Min overlap len: 0
+	Inner reads: 0
+	Length: 11307
+[2026-04-22 18:03:34] DEBUG: Inner: 4666 covered: 6374 total: 6650
+[2026-04-22 18:03:49] DEBUG: Assembled disjointig 14
+	With 4 reads
+	Start read: +b6a62273-3af3-4875-b994-eece018b1fbc
+	At position: 3
+	leftTip: 0 rightTip: 0
+	Suspicious: 0
+	Short ext: 0
+	Mean extensions: 709
+	Avg overlap len: 11062
+	Min overlap len: 11062
+	Inner reads: 0
+	Length: 40513
+[2026-04-22 18:03:49] DEBUG: Inner: 4670 covered: 6412 total: 6650
+[2026-04-22 18:03:58] DEBUG: Assembled disjointig 15
+	With 1 reads
+	Start read: +fb941091-188b-432d-8380-3ccfda9b21f5
+	At position: 1
+	leftTip: 1 rightTip: 1
+	Suspicious: 0
+	Short ext: 0
+	Mean extensions: 0
+	Avg overlap len: 0
+	Min overlap len: 0
+	Inner reads: 0
+	Length: 7716
+[2026-04-22 18:03:58] DEBUG: Inner: 4674 covered: 6426 total: 6650
+[2026-04-22 18:04:10] DEBUG: Assembled disjointig 16
+	With 1 reads
+	Start read: +3e6c8f3d-425b-480d-bcf8-3ebbfeb811cd
+	At position: 1
+	leftTip: 1 rightTip: 1
+	Suspicious: 0
+	Short ext: 0
+	Mean extensions: 1
+	Avg overlap len: 0
+	Min overlap len: 0
+	Inner reads: 0
+	Length: 13782
+[2026-04-22 18:04:10] DEBUG: Inner: 4676 covered: 6448 total: 6650
+[2026-04-22 18:04:49] DEBUG: Assembled disjointig 17
+	With 3 reads
+	Start read: +74f0615b-cfa6-40e8-b69b-90b8af873d10
+	At position: 1
+	leftTip: 1 rightTip: 1
+	Suspicious: 1
+	Short ext: 0
+	Mean extensions: 1
+	Avg overlap len: 10204
+	Min overlap len: 7431
+	Inner reads: 0
+	Length: 46497
+[2026-04-22 18:04:49] DEBUG: Inner: 4682 covered: 6514 total: 6650
+[2026-04-22 18:04:51] DEBUG: Assembled disjointig 18
+	With 2 reads
+	Start read: +fb846e1c-ac99-40fd-92c3-0636a3abbc42
+	At position: 1
+	leftTip: 1 rightTip: 1
+	Suspicious: 1
+	Short ext: 0
+	Mean extensions: 1
+	Avg overlap len: 6885
+	Min overlap len: 6885
+	Inner reads: 0
+	Length: 9082
+[2026-04-22 18:04:51] DEBUG: Inner: 4686 covered: 6518 total: 6650
+[2026-04-22 18:04:55] DEBUG: Assembled disjointig 19
+	With 1 reads
+	Start read: +f43d403f-472c-4fe4-99d4-47a75ca41778
+	At position: 1
+	leftTip: 1 rightTip: 1
+	Suspicious: 0
+	Short ext: 0
+	Mean extensions: 0
+	Avg overlap len: 0
+	Min overlap len: 0
+	Inner reads: 0
+	Length: 5335
+[2026-04-22 18:04:55] DEBUG: Inner: 4690 covered: 6532 total: 6650
+[2026-04-22 18:04:56] DEBUG: Assembled disjointig 20
+	With 4 reads
+	Start read: +2b87ccca-6227-4c79-ac56-bb0899959776
+	At position: 3
+	leftTip: 0 rightTip: 0
+	Suspicious: 0
+	Short ext: 0
+	Mean extensions: 675
+	Avg overlap len: 12008
+	Min overlap len: 12007
+	Inner reads: 0
+	Length: 85639
+[2026-04-22 18:04:56] DEBUG: Inner: 4694 covered: 6538 total: 6650
+[2026-04-22 18:05:17] INFO: Assembled 20 disjointigs
+[2026-04-22 18:05:17] INFO: Generating sequence
+[2026-04-22 18:05:17] DEBUG: Building positional index
+[2026-04-22 18:05:17] DEBUG: Total sequence: 608198 bp
+[2026-04-22 18:05:17] DEBUG: Mean k-mer frequency: 1.39907
+[2026-04-22 18:05:17] DEBUG: Repetitive k-mer frequency: 139
+[2026-04-22 18:05:17] DEBUG: Filtered 0 repetitive k-mers (0)
+[2026-04-22 18:05:17] DEBUG: Sorting k-mer index
+[2026-04-22 18:05:17] DEBUG: Selected k-mers: 434472
+[2026-04-22 18:05:17] DEBUG: K-mer index size: 607858
+[2026-04-22 18:05:17] DEBUG: Mean k-mer frequency: 1.39907
+[2026-04-22 18:05:17] DEBUG: Minimizer rate: 1.00056
+[2026-04-22 18:05:17] INFO: Filtering contained disjointigs
+[2026-04-22 18:05:17] DEBUG: Computing transitive closure for overlaps
+[2026-04-22 18:05:17] DEBUG: Found 78 overlaps
+[2026-04-22 18:05:17] DEBUG: Left 36 overlaps after filtering
+[2026-04-22 18:05:17] INFO: Contained seqs: 3
+[2026-04-22 18:05:17] DEBUG: Writing FASTA
+[2026-04-22 18:05:17] DEBUG: Peak RAM usage: 6 Gb
+-----------End assembly log------------
+[2026-04-22 18:05:17] root: DEBUG: Disjointigs length: 499207, N50: 46418
+[2026-04-22 18:05:17] root: INFO: >>>STAGE: consensus
+[2026-04-22 18:05:17] root: INFO: Running Minimap2
+[2026-04-22 18:05:30] root: INFO: Computing consensus
+[2026-04-22 18:05:40] root: INFO: Alignment error rate: 0.068680
+[2026-04-22 18:05:40] root: INFO: >>>STAGE: repeat
+[2026-04-22 18:05:40] root: INFO: Building and resolving repeat graph
+[2026-04-22 18:05:40] root: DEBUG: -----Begin repeat analyser log------
+[2026-04-22 18:05:40] root: DEBUG: Running: flye-modules repeat --disjointigs /Users/natalia/Development/VEOTask/assembly/10-consensus/consensus.fasta --reads /Users/natalia/Development/VEOTask/1_024_O.fastq.gz --out-dir /Users/natalia/Development/VEOTask/assembly/20-repeat --config /Users/natalia/miniconda3/envs/veo_env/lib/python3.10/site-packages/flye/config/bin_cfg/asm_raw_reads.cfg --log /Users/natalia/Development/VEOTask/assembly/flye.log --threads 2 --meta --min-ovlp 5000
+[2026-04-22 18:05:40] DEBUG: Build date: May  4 2025 23:18:48
+[2026-04-22 18:05:40] DEBUG: Total RAM: 16 Gb
+[2026-04-22 18:05:40] DEBUG: Available RAM: 0 Gb
+[2026-04-22 18:05:40] DEBUG: Total CPUs: 10
+[2026-04-22 18:05:40] DEBUG: Loading /Users/natalia/miniconda3/envs/veo_env/lib/python3.10/site-packages/flye/config/bin_cfg/asm_raw_reads.cfg
+[2026-04-22 18:05:40] DEBUG: Loading /Users/natalia/miniconda3/envs/veo_env/lib/python3.10/site-packages/flye/config/bin_cfg/asm_defaults.cfg
+[2026-04-22 18:05:40] DEBUG: 	big_genome_threshold=29000000
+[2026-04-22 18:05:40] DEBUG: 	meta_read_filter_kmer_freq=100
+[2026-04-22 18:05:40] DEBUG: 	chain_large_gap_penalty=2
+[2026-04-22 18:05:40] DEBUG: 	chain_small_gap_penalty=0.5
+[2026-04-22 18:05:40] DEBUG: 	chain_gap_jump_threshold=100
+[2026-04-22 18:05:40] DEBUG: 	max_jump_gap=500
+[2026-04-22 18:05:40] DEBUG: 	max_coverage_drop_rate=5
+[2026-04-22 18:05:40] DEBUG: 	max_extensions_drop_rate=5
+[2026-04-22 18:05:40] DEBUG: 	chimera_window=100
+[2026-04-22 18:05:40] DEBUG: 	chimera_overhang=1000
+[2026-04-22 18:05:40] DEBUG: 	min_reads_in_disjointig=4
+[2026-04-22 18:05:40] DEBUG: 	max_inner_reads=10
+[2026-04-22 18:05:40] DEBUG: 	max_inner_fraction=0.25
+[2026-04-22 18:05:40] DEBUG: 	aggressive_dup_filter=1
+[2026-04-22 18:05:40] DEBUG: 	max_separation=500
+[2026-04-22 18:05:40] DEBUG: 	unique_edge_length=50000
+[2026-04-22 18:05:40] DEBUG: 	min_repeat_res_support=0.51
+[2026-04-22 18:05:40] DEBUG: 	out_paths_ratio=5
+[2026-04-22 18:05:40] DEBUG: 	graph_cov_drop_rate=5
+[2026-04-22 18:05:40] DEBUG: 	coverage_estimate_window=100
+[2026-04-22 18:05:40] DEBUG: 	max_bubble_length=50000
+[2026-04-22 18:05:40] DEBUG: 	loop_coverage_rate=1.5
+[2026-04-22 18:05:40] DEBUG: 	repeat_edge_cov_mult=1.75
+[2026-04-22 18:05:40] DEBUG: 	weak_detach_rate=5
+[2026-04-22 18:05:40] DEBUG: 	tip_coverage_rate=2
+[2026-04-22 18:05:40] DEBUG: 	tip_length_rate=2
+[2026-04-22 18:05:40] DEBUG: 	output_gfa_before_rr=1
+[2026-04-22 18:05:40] DEBUG: 	remove_alt_edges=0
+[2026-04-22 18:05:40] DEBUG: 	low_cutoff_warning=1
+[2026-04-22 18:05:40] DEBUG: 	kmer_size=17
+[2026-04-22 18:05:40] DEBUG: 	use_minimizers=0
+[2026-04-22 18:05:40] DEBUG: 	reads_base_alignment=0
+[2026-04-22 18:05:40] DEBUG: 	meta_read_top_kmer_rate=0.40
+[2026-04-22 18:05:40] DEBUG: 	maximum_jump=1500
+[2026-04-22 18:05:40] DEBUG: 	maximum_overhang=1500
+[2026-04-22 18:05:40] DEBUG: 	repeat_kmer_rate=100
+[2026-04-22 18:05:40] DEBUG: 	assemble_ovlp_divergence=0.10
+[2026-04-22 18:05:40] DEBUG: 	assemble_divergence_relative=1
+[2026-04-22 18:05:40] DEBUG: 	repeat_graph_ovlp_divergence=0.08
+[2026-04-22 18:05:40] DEBUG: 	read_align_ovlp_divergence=0.25
+[2026-04-22 18:05:40] DEBUG: 	hpc_scoring_on=0
+[2026-04-22 18:05:40] DEBUG: 	add_unassembled_reads=0
+[2026-04-22 18:05:40] DEBUG: 	extend_contigs_with_repeats=0
+[2026-04-22 18:05:40] DEBUG: 	min_read_cov_cutoff=3
+[2026-04-22 18:05:40] DEBUG: 	short_tip_length=20000
+[2026-04-22 18:05:40] DEBUG: 	long_tip_length=100000
+[2026-04-22 18:05:40] DEBUG: Running with k-mer size: 17
+[2026-04-22 18:05:40] DEBUG: Selected minimum overlap 5000
+[2026-04-22 18:05:40] DEBUG: Metagenome mode: Y
+[2026-04-22 18:05:40] INFO: Parsing disjointigs
+[2026-04-22 18:05:40] DEBUG: Building positional index
+[2026-04-22 18:05:40] DEBUG: Total sequence: 488337 bp
+[2026-04-22 18:05:40] INFO: Building repeat graph
+[2026-04-22 18:05:40] DEBUG: Mean k-mer frequency: 1.32577
+[2026-04-22 18:05:40] DEBUG: Repetitive k-mer frequency: 132
+[2026-04-22 18:05:40] DEBUG: Filtered 0 repetitive k-mers (0)
+[2026-04-22 18:05:40] DEBUG: Sorting k-mer index
+[2026-04-22 18:05:40] DEBUG: Selected k-mers: 368122
+[2026-04-22 18:05:40] DEBUG: K-mer index size: 488048
+[2026-04-22 18:05:40] DEBUG: Mean k-mer frequency: 1.32578
+[2026-04-22 18:05:40] DEBUG: Minimizer rate: 1.00059
+[2026-04-22 18:05:40] DEBUG: Computing transitive closure for overlaps
+[2026-04-22 18:05:40] DEBUG: Found 46 overlaps
+[2026-04-22 18:05:40] DEBUG: Left 20 overlaps after filtering
+[2026-04-22 18:05:40] INFO: Median overlap divergence: 0.0543766
+[2026-04-22 18:05:40] DEBUG: Sequence divergence distribution: 
+
+    |  *       *     |                                     *                                             
+    |  *       *     |                                     *                                             
+    |  *       *     |                                     *                                             
+    |  *       *     |                                     *                                             
+    |  *       *     |                                     *                                             
+    |  *       *     |                                     *                                             
+    |  *       *     |                                     *                                             
+    |  *       *     |                                     *                                             
+    |  *       *     |                                     *                                             
+    |  *       *     |                                     *                                             
+    |***       **    |                                     *                                             
+    |***       **    |                                     *                                             
+    |***       **    |                                     *                                             
+    |***       **    |                                     *                                             
+    |***       **    |                                     *                                             
+    |***       **    |                                     *                                             
+    |***       **    |                                     *                                             
+    |***       **    |                                     *                                             
+    |***       **    |                                     *                                             
+    |***       **    |                                     *                                             
+    ----------------------------------------------------------------------------------------------------
+    0%        5%        10%       15%       20%       25%       30%       35%       40%       45%       
+
+    Q25 = 0.015, Q50 = 0.054, Q75 = 0.059
+
+[2026-04-22 18:05:40] DEBUG: Computing gluepoints
+[2026-04-22 18:05:40] DEBUG: Added 0 gluepoint projections
+[2026-04-22 18:05:40] DEBUG: Created 96 gluepoints
+[2026-04-22 18:05:40] DEBUG: Artificial loops removed: 0 left, 0 right, 0 both
+[2026-04-22 18:05:40] DEBUG: Initializing edges
+[2026-04-22 18:05:40] DEBUG: Edges length checksum: 12177520590
+[2026-04-22 18:05:40] DEBUG: Filtered 0 singleton segments
+[2026-04-22 18:05:40] DEBUG: Removed 0 simple and 0 double chimeric junctions
+[2026-04-22 18:05:40] DEBUG: Collapsed 4 edges
+[2026-04-22 18:05:40] DEBUG:  	21	+disjointig_1	12848	71480	58632	
+[2026-04-22 18:05:40] DEBUG: *	6	+disjointig_11	0	28221	28221	
+[2026-04-22 18:05:40] DEBUG: *	7	+disjointig_12	0	39059	39059	
+[2026-04-22 18:05:40] DEBUG: *	8	+disjointig_13	0	11313	11313	
+[2026-04-22 18:05:40] DEBUG: *	9	+disjointig_15	0	7759	7759	
+[2026-04-22 18:05:40] DEBUG: *	10	+disjointig_16	0	13797	13797	
+[2026-04-22 18:05:40] DEBUG: *	11	+disjointig_17	0	46483	46483	
+[2026-04-22 18:05:40] DEBUG: *	12	+disjointig_18	0	9088	9088	
+[2026-04-22 18:05:40] DEBUG: *	13	+disjointig_19	0	5348	5348	
+[2026-04-22 18:05:40] DEBUG: *	14	+disjointig_2	0	13688	13688	
+[2026-04-22 18:05:40] DEBUG:  	21	+disjointig_20	0	58826	58826	
+[2026-04-22 18:05:40] DEBUG: *	15	+disjointig_3	0	9162	9162	
+[2026-04-22 18:05:40] DEBUG: *	16	+disjointig_4	0	5045	5045	
+[2026-04-22 18:05:40] DEBUG: *	17	+disjointig_6	0	26352	26352	
+[2026-04-22 18:05:40] DEBUG: *	18	+disjointig_7	0	39413	39413	
+[2026-04-22 18:05:40] DEBUG: *	19	+disjointig_8	0	32229	32229	
+[2026-04-22 18:05:40] DEBUG: *	20	+disjointig_9	0	7586	7586	
+[2026-04-22 18:05:40] DEBUG: Total edges: 21
+[2026-04-22 18:05:40] INFO: Parsing reads
+[2026-04-22 18:05:40] DEBUG: Building positional index
+[2026-04-22 18:05:40] DEBUG: Total sequence: 50814095 bp
+[2026-04-22 18:05:40] DEBUG: Building positional index
+[2026-04-22 18:05:40] DEBUG: Total sequence: 412001 bp
+[2026-04-22 18:05:40] INFO: Aligning reads to the graph
+[2026-04-22 18:05:41] DEBUG: Mean k-mer frequency: 1.15717
+[2026-04-22 18:05:41] DEBUG: Repetitive k-mer frequency: 115
+[2026-04-22 18:05:41] DEBUG: Filtered 0 repetitive k-mers (0)
+[2026-04-22 18:05:41] DEBUG: Sorting k-mer index
+[2026-04-22 18:05:41] DEBUG: Selected k-mers: 355790
+[2026-04-22 18:05:41] DEBUG: K-mer index size: 411712
+[2026-04-22 18:05:41] DEBUG: Mean k-mer frequency: 1.15718
+[2026-04-22 18:05:41] DEBUG: Minimizer rate: 1.0007
+[2026-04-22 18:05:44] DEBUG: Total reads : 3325
+[2026-04-22 18:05:44] DEBUG: Read with aligned parts : 3244
+[2026-04-22 18:05:44] DEBUG: Aligned in one piece : 3086
+[2026-04-22 18:05:44] INFO: Aligned read sequence: 43884558 / 45433303 (0.965912)
+[2026-04-22 18:05:44] INFO: Median overlap divergence: 0.0170612
+[2026-04-22 18:05:44] DEBUG: Sequence divergence distribution: 
+
+    |  **                                              |                                                 
+    |  **                                              |                                                 
+    |  **                                              |                                                 
+    |  **                                              |                                                 
+    |  **                                              |                                                 
+    |  **                                              |                                                 
+    |  **                                              |                                                 
+    |  **                                              |                                                 
+    |  **                                              |                                                 
+    |  **                                              |                                                 
+    |  ***                                             |                                                 
+    |  ***                                             |                                                 
+    |  ***                                             |                                                 
+    |  ***                                             |                                                 
+    |  ***                                             |                                                 
+    |  ****                                            |                                                 
+    |  ****                                            |                                                 
+    |  *****                                           |                                                 
+    | ********                                         |                                                 
+    |********************           *                  |                                                 
+    ----------------------------------------------------------------------------------------------------
+    0%        5%        10%       15%       20%       25%       30%       35%       40%       45%       
+
+    Q25 = 0.014, Q50 = 0.017, Q75 = 0.023
+
+[2026-04-22 18:05:44] INFO: Mean edge coverage: 124
+[2026-04-22 18:05:44] DEBUG: 6	len:28221	cov:2	mult:0.016129
+[2026-04-22 18:05:44] DEBUG: -6	len:28221	cov:2	mult:0.016129
+[2026-04-22 18:05:44] DEBUG: 7	len:39059	cov:4	mult:0.0322581
+[2026-04-22 18:05:44] DEBUG: -7	len:39059	cov:4	mult:0.0322581
+[2026-04-22 18:05:44] DEBUG: 8	len:11313	cov:3	mult:0.0241935
+[2026-04-22 18:05:44] DEBUG: -8	len:11313	cov:3	mult:0.0241935
+[2026-04-22 18:05:44] DEBUG: 9	len:7759	cov:2	mult:0.016129
+[2026-04-22 18:05:44] DEBUG: -9	len:7759	cov:2	mult:0.016129
+[2026-04-22 18:05:44] DEBUG: 10	len:13797	cov:2	mult:0.016129
+[2026-04-22 18:05:44] DEBUG: -10	len:13797	cov:2	mult:0.016129
+[2026-04-22 18:05:44] DEBUG: 11	len:46483	cov:1	mult:0.00806452
+[2026-04-22 18:05:44] DEBUG: -11	len:46483	cov:1	mult:0.00806452
+[2026-04-22 18:05:44] DEBUG: 12	len:9088	cov:2	mult:0.016129
+[2026-04-22 18:05:44] DEBUG: -12	len:9088	cov:2	mult:0.016129
+[2026-04-22 18:05:44] DEBUG: 13	len:5348	cov:2	mult:0.016129
+[2026-04-22 18:05:44] DEBUG: -13	len:5348	cov:2	mult:0.016129
+[2026-04-22 18:05:44] DEBUG: 14	len:13688	cov:2	mult:0.016129
+[2026-04-22 18:05:44] DEBUG: -14	len:13688	cov:2	mult:0.016129
+[2026-04-22 18:05:44] DEBUG: 15	len:9162	cov:2	mult:0.016129
+[2026-04-22 18:05:44] DEBUG: -15	len:9162	cov:2	mult:0.016129
+[2026-04-22 18:05:44] DEBUG: 16	len:5045	cov:1	mult:0.00806452
+[2026-04-22 18:05:44] DEBUG: -16	len:5045	cov:1	mult:0.00806452
+[2026-04-22 18:05:44] DEBUG: 17	len:26352	cov:2	mult:0.016129
+[2026-04-22 18:05:44] DEBUG: -17	len:26352	cov:2	mult:0.016129
+[2026-04-22 18:05:44] DEBUG: 18	len:39413	cov:3	mult:0.0241935
+[2026-04-22 18:05:44] DEBUG: -18	len:39413	cov:3	mult:0.0241935
+[2026-04-22 18:05:44] DEBUG: 19	len:32229	cov:4	mult:0.0322581
+[2026-04-22 18:05:44] DEBUG: -19	len:32229	cov:4	mult:0.0322581
+[2026-04-22 18:05:44] DEBUG: 20	len:7586	cov:2	mult:0.016129
+[2026-04-22 18:05:44] DEBUG: -20	len:7586	cov:2	mult:0.016129
+[2026-04-22 18:05:44] DEBUG: 21	len:58729	cov:642	mult:5.17742
+[2026-04-22 18:05:44] DEBUG: -21	len:58729	cov:642	mult:5.17742
+[2026-04-22 18:05:44] DEBUG: Unique coverage threshold 2
+[2026-04-22 18:05:44] INFO: Simplifying the graph
+[2026-04-22 18:05:44] DEBUG: Read coverage cutoff: 3
+[2026-04-22 18:05:44] DEBUG: [SIMPL] Removed 11 paths with low coverage
+[2026-04-22 18:05:44] DEBUG: [SIMPL] Masked 0 heterozygous loops
+[2026-04-22 18:05:44] DEBUG: [SIMPL] Masked 0 simple bubbles
+[2026-04-22 18:05:44] DEBUG: [SIMPL] Masked 0 roundabouts
+[2026-04-22 18:05:44] DEBUG: [SIMPL] Masked 0 superbubbles
+[2026-04-22 18:05:44] DEBUG: Finding repeats
+[2026-04-22 18:05:44] DEBUG: Read coverage cutoff: 3
+[2026-04-22 18:05:44] DEBUG: Repeat detection iteration 1
+[2026-04-22 18:05:44] DEBUG: Repeat detection iteration 2
+[2026-04-22 18:05:44] DEBUG: Writing Dot
+[2026-04-22 18:05:44] DEBUG: Writing FASTA
+[2026-04-22 18:05:44] DEBUG: Writing Gfa
+[2026-04-22 18:05:44] DEBUG: [SIMPL] Resolved 0 simple repeats
+[2026-04-22 18:05:44] DEBUG: [SIMPL] == Iteration 1 ==
+[2026-04-22 18:05:44] DEBUG: Splitting nodes
+[2026-04-22 18:05:44] DEBUG: [SIMPL] Split 0 nodes
+[2026-04-22 18:05:44] DEBUG: [SIMPL] Disconnected 0 minor paths
+[2026-04-22 18:05:44] DEBUG: [SIMPL] Clipped 0 short and 0 long tips
+[2026-04-22 18:05:44] DEBUG: [SIMPL] Masked 0 heterozygous loops
+[2026-04-22 18:05:44] DEBUG: [SIMPL] Masked 0 simple bubbles
+[2026-04-22 18:05:44] DEBUG: [SIMPL] Masked 0 roundabouts
+[2026-04-22 18:05:44] DEBUG: [SIMPL] Masked 0 superbubbles
+[2026-04-22 18:05:44] DEBUG: Finding repeats
+[2026-04-22 18:05:44] DEBUG: Read coverage cutoff: 3
+[2026-04-22 18:05:44] DEBUG: Repeat detection iteration 1
+[2026-04-22 18:05:44] DEBUG: Repeat detection iteration 2
+[2026-04-22 18:05:44] DEBUG: Total unique edges: 5
+[2026-04-22 18:05:44] DEBUG: [SIMPL] Resolved repeats: 0
+[2026-04-22 18:05:44] DEBUG: RR links: 0
+[2026-04-22 18:05:44] DEBUG: Unresolved: 0
+[2026-04-22 18:05:44] DEBUG: Removed 0 simple and 0 double chimeric junctions
+[2026-04-22 18:05:44] DEBUG: [SIMPL] Simplified 0 forks
+[2026-04-22 18:05:44] DEBUG: [SIMPL] Collapsed 0 haplotypes
+[2026-04-22 18:05:44] DEBUG: [SIMPL] Resolved 0 simple repeats
+[2026-04-22 18:05:44] DEBUG: Read coverage cutoff: 3
+[2026-04-22 18:05:44] DEBUG: [SIMPL] Removed 0 paths with low coverage
+[2026-04-22 18:05:44] DEBUG: Finding repeats
+[2026-04-22 18:05:44] DEBUG: Read coverage cutoff: 3
+[2026-04-22 18:05:44] DEBUG: Repeat detection iteration 1
+[2026-04-22 18:05:44] DEBUG: Repeat detection iteration 2
+[2026-04-22 18:05:44] DEBUG: Writing Dot
+[2026-04-22 18:05:44] DEBUG: Writing FASTA
+[2026-04-22 18:05:44] DEBUG: Peak RAM usage: 0 Gb
+-----------End assembly log------------
+[2026-04-22 18:05:44] root: INFO: >>>STAGE: contigger
+[2026-04-22 18:05:44] root: INFO: Generating contigs
+[2026-04-22 18:05:44] root: DEBUG: -----Begin contigger analyser log------
+[2026-04-22 18:05:44] root: DEBUG: Running: flye-modules contigger --graph-edges /Users/natalia/Development/VEOTask/assembly/20-repeat/repeat_graph_edges.fasta --reads /Users/natalia/Development/VEOTask/1_024_O.fastq.gz --out-dir /Users/natalia/Development/VEOTask/assembly/30-contigger --config /Users/natalia/miniconda3/envs/veo_env/lib/python3.10/site-packages/flye/config/bin_cfg/asm_raw_reads.cfg --repeat-graph /Users/natalia/Development/VEOTask/assembly/20-repeat/repeat_graph_dump --graph-aln /Users/natalia/Development/VEOTask/assembly/20-repeat/read_alignment_dump --log /Users/natalia/Development/VEOTask/assembly/flye.log --threads 2 --min-ovlp 5000
+[2026-04-22 18:05:44] DEBUG: Build date: May  4 2025 23:18:54
+[2026-04-22 18:05:44] DEBUG: Total RAM: 16 Gb
+[2026-04-22 18:05:44] DEBUG: Available RAM: 0 Gb
+[2026-04-22 18:05:44] DEBUG: Total CPUs: 10
+[2026-04-22 18:05:44] DEBUG: Loading /Users/natalia/miniconda3/envs/veo_env/lib/python3.10/site-packages/flye/config/bin_cfg/asm_raw_reads.cfg
+[2026-04-22 18:05:44] DEBUG: Loading /Users/natalia/miniconda3/envs/veo_env/lib/python3.10/site-packages/flye/config/bin_cfg/asm_defaults.cfg
+[2026-04-22 18:05:44] DEBUG: 	big_genome_threshold=29000000
+[2026-04-22 18:05:44] DEBUG: 	meta_read_filter_kmer_freq=100
+[2026-04-22 18:05:44] DEBUG: 	chain_large_gap_penalty=2
+[2026-04-22 18:05:44] DEBUG: 	chain_small_gap_penalty=0.5
+[2026-04-22 18:05:44] DEBUG: 	chain_gap_jump_threshold=100
+[2026-04-22 18:05:44] DEBUG: 	max_jump_gap=500
+[2026-04-22 18:05:44] DEBUG: 	max_coverage_drop_rate=5
+[2026-04-22 18:05:44] DEBUG: 	max_extensions_drop_rate=5
+[2026-04-22 18:05:44] DEBUG: 	chimera_window=100
+[2026-04-22 18:05:44] DEBUG: 	chimera_overhang=1000
+[2026-04-22 18:05:44] DEBUG: 	min_reads_in_disjointig=4
+[2026-04-22 18:05:44] DEBUG: 	max_inner_reads=10
+[2026-04-22 18:05:44] DEBUG: 	max_inner_fraction=0.25
+[2026-04-22 18:05:44] DEBUG: 	aggressive_dup_filter=1
+[2026-04-22 18:05:44] DEBUG: 	max_separation=500
+[2026-04-22 18:05:44] DEBUG: 	unique_edge_length=50000
+[2026-04-22 18:05:44] DEBUG: 	min_repeat_res_support=0.51
+[2026-04-22 18:05:44] DEBUG: 	out_paths_ratio=5
+[2026-04-22 18:05:44] DEBUG: 	graph_cov_drop_rate=5
+[2026-04-22 18:05:44] DEBUG: 	coverage_estimate_window=100
+[2026-04-22 18:05:44] DEBUG: 	max_bubble_length=50000
+[2026-04-22 18:05:44] DEBUG: 	loop_coverage_rate=1.5
+[2026-04-22 18:05:44] DEBUG: 	repeat_edge_cov_mult=1.75
+[2026-04-22 18:05:44] DEBUG: 	weak_detach_rate=5
+[2026-04-22 18:05:44] DEBUG: 	tip_coverage_rate=2
+[2026-04-22 18:05:44] DEBUG: 	tip_length_rate=2
+[2026-04-22 18:05:44] DEBUG: 	output_gfa_before_rr=1
+[2026-04-22 18:05:44] DEBUG: 	remove_alt_edges=0
+[2026-04-22 18:05:44] DEBUG: 	low_cutoff_warning=1
+[2026-04-22 18:05:44] DEBUG: 	kmer_size=17
+[2026-04-22 18:05:44] DEBUG: 	use_minimizers=0
+[2026-04-22 18:05:44] DEBUG: 	reads_base_alignment=0
+[2026-04-22 18:05:44] DEBUG: 	meta_read_top_kmer_rate=0.40
+[2026-04-22 18:05:44] DEBUG: 	maximum_jump=1500
+[2026-04-22 18:05:44] DEBUG: 	maximum_overhang=1500
+[2026-04-22 18:05:44] DEBUG: 	repeat_kmer_rate=100
+[2026-04-22 18:05:44] DEBUG: 	assemble_ovlp_divergence=0.10
+[2026-04-22 18:05:44] DEBUG: 	assemble_divergence_relative=1
+[2026-04-22 18:05:44] DEBUG: 	repeat_graph_ovlp_divergence=0.08
+[2026-04-22 18:05:44] DEBUG: 	read_align_ovlp_divergence=0.25
+[2026-04-22 18:05:44] DEBUG: 	hpc_scoring_on=0
+[2026-04-22 18:05:44] DEBUG: 	add_unassembled_reads=0
+[2026-04-22 18:05:44] DEBUG: 	extend_contigs_with_repeats=0
+[2026-04-22 18:05:44] DEBUG: 	min_read_cov_cutoff=3
+[2026-04-22 18:05:44] DEBUG: 	short_tip_length=20000
+[2026-04-22 18:05:44] DEBUG: 	long_tip_length=100000
+[2026-04-22 18:05:44] DEBUG: Running with k-mer size: 17
+[2026-04-22 18:05:44] DEBUG: Selected minimum overlap 5000
+[2026-04-22 18:05:44] INFO: Reading sequences
+[2026-04-22 18:05:45] DEBUG: Building positional index
+[2026-04-22 18:05:45] DEBUG: Total sequence: 50814095 bp
+[2026-04-22 18:05:45] DEBUG: Flipped 0
+[2026-04-22 18:05:45] DEBUG: UPath 1: 7
+[2026-04-22 18:05:45] DEBUG: UPath 2: 8
+[2026-04-22 18:05:45] DEBUG: UPath 3: 18
+[2026-04-22 18:05:45] DEBUG: UPath 4: 19
+[2026-04-22 18:05:45] DEBUG: UPath 5: 21
+[2026-04-22 18:05:45] DEBUG: Final graph contains 5 egdes
+[2026-04-22 18:05:45] DEBUG: Extending contigs into repeats
+[2026-04-22 18:05:45] DEBUG: Covered 0 repetitive contigs
+[2026-04-22 18:05:45] INFO: Generated 5 contigs
+[2026-04-22 18:05:45] DEBUG: Writing FASTA
+[2026-04-22 18:05:45] DEBUG: Generating scaffold connections
+[2026-04-22 18:05:45] INFO: Added 0 scaffold connections
+[2026-04-22 18:05:45] DEBUG: Writing Dot
+[2026-04-22 18:05:45] DEBUG: Writing FASTA
+[2026-04-22 18:05:45] DEBUG: Writing Gfa
+[2026-04-22 18:05:45] DEBUG: Peak RAM usage: 0 Gb
+-----------End assembly log------------
+[2026-04-22 18:05:45] root: INFO: >>>STAGE: polishing
+[2026-04-22 18:05:45] root: INFO: Polishing genome (1/1)
+[2026-04-22 18:05:45] root: INFO: Running minimap2
+[2026-04-22 18:05:49] root: INFO: Separating alignment into bubbles
+[2026-04-22 18:06:02] root: DEBUG: Generated 9504 bubbles
+[2026-04-22 18:06:02] root: DEBUG: Split 8 long bubbles
+[2026-04-22 18:06:02] root: DEBUG: Skipped 0 empty bubbles
+[2026-04-22 18:06:02] root: DEBUG: Skipped 0 bubbles with long branches
+[2026-04-22 18:06:02] root: INFO: Alignment error rate: 0.048766
+[2026-04-22 18:06:02] root: INFO: Correcting bubbles
+[2026-04-22 18:06:09] root: DEBUG: Mean contig coverage: 232, selected threshold: 3
+[2026-04-22 18:06:09] root: DEBUG: Filtered 0 contigs of total length 0
+[2026-04-22 18:06:09] root: DEBUG: Generating polished GFA
+[2026-04-22 18:06:09] root: DEBUG: 0 sequences remained unpolished
+[2026-04-22 18:06:09] root: INFO: >>>STAGE: finalize
+[2026-04-22 18:06:09] root: DEBUG: ---Output dir contents:----
+[2026-04-22 18:06:09] root: DEBUG: assembly/
+[2026-04-22 18:06:09] root: DEBUG:     179.0 K     assembly_graph.gfa
+[2026-04-22 18:06:09] root: DEBUG:     92.0 B      params.json
+[2026-04-22 18:06:09] root: DEBUG:     1.0 K       assembly_graph.gv
+[2026-04-22 18:06:09] root: DEBUG:     38.0 K      flye.log
+[2026-04-22 18:06:09] root: DEBUG:     181.0 K     assembly.fasta
+[2026-04-22 18:06:09] root: DEBUG:     00-assembly/
+[2026-04-22 18:06:09] root: DEBUG:         544.0 B     draft_assembly.fasta.fai
+[2026-04-22 18:06:09] root: DEBUG:         493.0 K     draft_assembly.fasta
+[2026-04-22 18:06:09] root: DEBUG:     40-polishing/
+[2026-04-22 18:06:09] root: DEBUG:         181.0 K     filtered_contigs.fasta
+[2026-04-22 18:06:09] root: DEBUG:         44.0 K      base_coverage.bed.gz
+[2026-04-22 18:06:09] root: DEBUG:         113.0 B     contigs_stats.txt
+[2026-04-22 18:06:09] root: DEBUG:         890.0 B     minimap.stderr
+[2026-04-22 18:06:09] root: DEBUG:         7.0 K       minimap_1.bam.csi
+[2026-04-22 18:06:09] root: DEBUG:         113.0 B     filtered_stats.txt
+[2026-04-22 18:06:09] root: DEBUG:         133.0 B     filtered_contigs.fasta.fai
+[2026-04-22 18:06:09] root: DEBUG:         179.0 K     polished_edges.gfa
+[2026-04-22 18:06:09] root: DEBUG:         158.0 B     edges_aln.bam.csi
+[2026-04-22 18:06:09] root: DEBUG:     20-repeat/
+[2026-04-22 18:06:09] root: DEBUG:         176.0 K     graph_before_rr.gfa
+[2026-04-22 18:06:09] root: DEBUG:         1.0 M       read_alignment_dump
+[2026-04-22 18:06:09] root: DEBUG:         1.0 K       repeat_graph_dump
+[2026-04-22 18:06:09] root: DEBUG:         178.0 K     graph_before_rr.fasta
+[2026-04-22 18:06:09] root: DEBUG:         1.0 K       graph_before_rr.gv
+[2026-04-22 18:06:09] root: DEBUG:         407.0 K     repeat_graph_edges.fasta
+[2026-04-22 18:06:09] root: DEBUG:         1.0 K       graph_after_rr.gv
+[2026-04-22 18:06:09] root: DEBUG:     30-contigger/
+[2026-04-22 18:06:09] root: DEBUG:         178.0 K     graph_final.fasta
+[2026-04-22 18:06:09] root: DEBUG:         178.0 K     contigs.fasta
+[2026-04-22 18:06:09] root: DEBUG:         239.0 B     contigs_stats.txt
+[2026-04-22 18:06:09] root: DEBUG:         0.0 B       scaffolds_links.txt
+[2026-04-22 18:06:09] root: DEBUG:         133.0 B     contigs.fasta.fai
+[2026-04-22 18:06:09] root: DEBUG:         1.0 K       graph_final.gv
+[2026-04-22 18:06:09] root: DEBUG:         176.0 K     graph_final.gfa
+[2026-04-22 18:06:09] root: DEBUG:     10-consensus/
+[2026-04-22 18:06:09] root: DEBUG:         485.0 K     consensus.fasta
+[2026-04-22 18:06:09] root: DEBUG:         935.0 B     minimap.stderr
+[2026-04-22 18:06:09] root: DEBUG:         11.0 K      minimap.bam.csi
+[2026-04-22 18:06:09] root: DEBUG: --------------------------
+[2026-04-22 18:06:09] root: INFO: Assembly statistics:
+
+	Total length:	183086
+	Fragments:	5
+	Fragments N50:	41137
+	Largest frg:	58829
+	Scaffolds:	0
+	Mean coverage:	232
+
+[2026-04-22 18:06:09] root: INFO: Final assembly: /Users/natalia/Development/VEOTask/assembly/assembly.fasta
