@@ -75,7 +75,8 @@ rule filtlong:
 
 rule flye:
     input:
-        "results/reads_filtered.fastq.gz"
+        reads="results/reads_filtered.fastq.gz",
+        kraken="results/kraken_reads/kraken_report.txt"
     output:
         "results/assembly/assembly.fasta"
     threads: config["threads"]
