@@ -2,8 +2,8 @@
 databases/
 
 # Raw sequencing data
-data/*.fastq.gz
-data/*.fastq
+#data/*.fastq.gz
+#data/*.fastq
 
 # Archives
 *.tar.gz
