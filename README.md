@@ -36,7 +36,7 @@ checkv download_database databases/checkv_db/
 
 ```bash
 conda activate veo_env
-snakemake --use-conda --conda-frontend conda --cores 8
+snakemake --use-conda --conda-frontend conda --cores 2
 ```
 
 ## Results summary
