@@ -5,8 +5,9 @@ Identified as a viral metagenome dominated by Vibrio and Pseudomonas bacteriopha
 
 ## Pipeline overview
 
-
 Raw reads → QC → Filtering → Kraken2 → Assembly → QC → Contig characterization → Report
+
+![Pipeline DAG](dag.png)
 ## Requirements
 
 - conda
